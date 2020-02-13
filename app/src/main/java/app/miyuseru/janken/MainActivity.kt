@@ -13,24 +13,33 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+
+
+
+
+
     fun goo(view: View?){
         player.text = "あなたの手はぐーです"
         val number = Random().nextInt(3)
 
         when (number){
             0-> {
-                cpu.text = "相手の手はぐーです"
+                cpu.setImageResource(R.drawable.goo)
                 result.text = "引き分けです"
+                result.setTextColor(Color.parseColor( "#000000"))
             }
             1 -> {
-                cpu.text = "相手の手はちょきです"
+                cpu.setImageResource(R.drawable.choki)
                 result.text = "あなたの勝ちです"
+                result.setTextColor(Color.parseColor( "#2196f3"))
+
 
 
             }
             2 -> {
-                cpu.text = "相手の手はぱーです"
+                cpu.setImageResource(R.drawable.paa)
                 result.text = "あなたの負けです"
+                result.setTextColor(Color.parseColor( "#000000"))
 
             }
         }
@@ -39,24 +48,24 @@ class MainActivity : AppCompatActivity() {
     fun choki(view: View?){
         player.text = "あなたの手はちょきです"
         val number = Random().nextInt(3)
-        if(number == 1){
-            (result).setTextColor(Color.rgb(255, 0, 0))
-        }
 
         when (number){
             0-> {
-                cpu.text = "相手の手はちょきです"
+                cpu.setImageResource(R.drawable.choki)
                 result.text = "引き分けです"
+                result.setTextColor(Color.parseColor( "#000000"))
             }
             1 -> {
-                cpu.text = "相手の手はぱーです"
+                cpu.setImageResource(R.drawable.paa)
                 result.text = "あなたの勝ちです"
+                result.setTextColor(Color.parseColor( "#2196f3"))
 
 
             }
             2 -> {
-                cpu.text = "相手の手はぐーです"
+                cpu.setImageResource(R.drawable.goo)
                 result.text = "あなたの負けです"
+                result.setTextColor(Color.parseColor( "#000000"))
 
             }
         }
@@ -68,18 +77,21 @@ class MainActivity : AppCompatActivity() {
 
         when (number){
             0-> {
-                cpu.text = "相手の手はぱーです"
+                cpu.setImageResource(R.drawable.paa)
                 result.text = "引き分けです"
+                result.setTextColor(Color.parseColor( "#000000"))
             }
             1 -> {
-                cpu.text = "相手の手はぐーです"
+                cpu.setImageResource(R.drawable.goo)
                 result.text = "あなたの勝ちです"
+                result.setTextColor(Color.parseColor( "#2196f3"))
 
 
             }
             2 -> {
-                cpu.text = "相手の手はちょきです"
+                cpu.setImageResource(R.drawable.choki)
                 result.text = "あなたの負けです"
+                result.setTextColor(Color.parseColor( "#000000"))
 
             }
         }
